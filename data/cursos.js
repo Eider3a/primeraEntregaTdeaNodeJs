@@ -7,13 +7,13 @@ const courses = [
     },
     {
         id: 2,
-        name: 'Math',
+        name: 'Matematicas',
         duration: '8',
         price: 2110000
     },
     {
         id: 3,
-        name: 'Chemistry',
+        name: 'Quimica',
         duration: '6',
         price: 3990000
     }

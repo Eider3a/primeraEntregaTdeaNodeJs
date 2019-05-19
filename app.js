@@ -7,6 +7,7 @@ const matriculasPath = p.join(__dirname, 'data', 'matriculas.txt');
 //https://khaledgarbaya.net/articles/how-to-create-a-node-js-command-line-tool-with-yargs-middleware
 //https://github.com/yargs/yargs
 //https://coderwall.com/p/_ppzrw/be-careful-with-settimeout-in-loops
+//https://github.com/yargs/yargs/issues/225
 
 //Declaracion de las funciones requeridas en el programa.
 function showCursos() {
@@ -43,12 +44,10 @@ function verificarCurso(id, name, cedula) {
 }
 
 
-//Para saber si el usuario no ingreso ningun comando.
-if (argv.argv._.length == 0) {//si el usuario no ingresa ningun comando entonces se muestran los cursos.
-    showCursos();
-}
-
 argv
+    .command('$0', 'Default command', () => { }, (argv) => {//Comando por defecto, sin ningun commando.
+        showCursos();
+    })
     .command('cursos', 'Despliega todos los cursos disponibles', () => {//Comando para listar los cursos.
         showCursos();
     })
