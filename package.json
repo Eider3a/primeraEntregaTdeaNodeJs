@@ -1,0 +1,16 @@
+{
+  "name": "primeraentrega",
+  "version": "1.0.0",
+  "description": "Esta es la primera entrega del curso de nodeJs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Eider Arango Amaya => eider.udea@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.0",
+    "yargs": "^13.2.4"
+  }
+}
